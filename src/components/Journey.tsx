@@ -10,6 +10,12 @@ const milestones = [
     description: "Currently working on projects using technologies such as WebSockets, Docker, Firebase, and modern full-stack frameworks."
   },
   {
+    date: "March 2026",
+    title:"Created my first Chrome Extension",
+    description:"A YouTube Focus mode extension that blocks recommended videos to improve concentration."
+    
+  },
+  {
     date: "February 2026",
     title: "First Full-Stack Platform",
     description: "Built my first fully working full-stack project including authentication, APIs, and backend integrations."

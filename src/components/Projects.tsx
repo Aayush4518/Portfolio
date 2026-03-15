@@ -110,7 +110,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-full border border-white/10 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-500 shrink-0">
+              <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-full border border-white/10 group-hover:bg-accent group-hover:border-accent group-hover:text-foreground transition-all duration-500 shrink-0">
                 <ArrowUpRight className="w-7 h-7 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
               </div>
             </motion.div>

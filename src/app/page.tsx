@@ -22,7 +22,7 @@ export default function Home() {
   }, [isLoading]);
 
   return (
-    <main className="bg-background min-h-screen text-foreground selection:bg-accent/30 selection:text-white">
+    <main className="bg-background min-h-screen text-foreground selection:bg-accent/30 selection:text-foreground">
       <AnimatePresence mode="wait">
         {isLoading && (
           <Loader key="loader" onComplete={() => setIsLoading(false)} />
