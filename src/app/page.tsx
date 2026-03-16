@@ -8,6 +8,9 @@ import Introduction from "@/components/Introduction";
 import Journey from "@/components/Journey";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
+import WhatIDo from "@/components/WhatIDo";
+import TechStack from "@/components/TechStack";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +42,9 @@ export default function Home() {
           >
             <Hero />
             <div className="bg-[#0d0d0d]">
+              <WhatIDo />
               <Introduction />
+              <TechStack />
               <Journey />
               <Projects />
               <Footer />
@@ -47,6 +52,7 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+      <BackToTop />
     </main>
   );
 }

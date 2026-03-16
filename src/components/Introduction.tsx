@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "../app/globals.css"
+import AnimatedText from "./AnimatedText";
 
 export default function Introduction() {
   const containerRef = useRef<HTMLElement>(null);
@@ -48,14 +49,14 @@ export default function Introduction() {
           `
         }}
       />
-
+      
       <motion.div 
         className="max-w-5xl relative z-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-100px" }}
-      >
+        >
         <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-heading font-medium tracking-tight leading-[1.2] text-foreground/90">
           I am a 
            <span className="text-[rgb(235,89,57)]"> Developer </span>
@@ -64,6 +65,7 @@ export default function Introduction() {
         </h2>
         <div></div>
       </motion.div>
+        {/* </AnimatedText> */}
     </section>
   );
 }

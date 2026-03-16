@@ -14,8 +14,19 @@ export default function CustomCursor() {
         y: e.clientY,
       });
       if (!isVisible) setIsVisible(true);
+      const element= document.elementFromPoint(e.clientX, e.clientY)
+      if(!element) return;
+      const tag= element.tagName.toLowerCase();
+      const textTags= ["p", "span", "h1", "h2", "h4", "h5", "h6", "label"]
+      
+      if(textTags.includes(tag)){
+        setIsVisible(false);
+      }
+      else{
+        setIsVisible(true)
+      }
+      
     };
-
     const handleMouseLeave = () => setIsVisible(false);
     const handleMouseEnter = () => setIsVisible(true);
 
@@ -32,7 +43,8 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-8 h-8 rounded-full border-[1px] border-accent pointer-events-none z-[9999] sm:block hidden"
+      className="fixed bg-accent top-0 left-0 w-9 h-9 rounded-full border-[1px] border-accent pointer-events-none z-[9999] sm:block hidden"
+      
       animate={{
         x: mousePosition.x - 20, // offset by half the width to center
         y: mousePosition.y - 20, // offset by half the height to center
@@ -41,7 +53,7 @@ export default function CustomCursor() {
       transition={{
         type: "spring",
         mass: 0.1,
-        stiffness: 800,
+        stiffness: 400,
         damping: 40,
         opacity: { duration: 0.2 },
       }}

@@ -123,7 +123,10 @@ export default function Journey() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          Journey
+          <span className="pb-2 border-b border-[rgb(183, 171, 152)]">
+          Professional Journey
+
+          </span>
         </motion.h2>
 
         <div className="relative pl-6 md:pl-10">
@@ -151,7 +154,7 @@ export default function Journey() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span className="text-accent text-sm md:text-base tracking-wide font-medium mb-3 block">
+                  <span className="text-accent w-fit text-sm md:text-base tracking-wide font-medium mb-3 block">
                     {milestone.date}
                   </span>
                   <h3 className="text-2xl md:text-4xl font-heading font-medium text-foreground mb-4">

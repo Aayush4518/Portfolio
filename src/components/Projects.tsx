@@ -73,7 +73,9 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
+          <span className="pb-2 border-b border-[rgb(183, 171, 152)]">
           Selected Works
+          </span>
         </motion.h2>
 
         <div className="flex flex-col gap-6 md:gap-10">
