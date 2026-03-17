@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { File, Github, Linkedin, Mail } from "lucide-react";
 import { useRef } from "react";
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
         }}
       />
 
-      <div className="max-w-[85rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+      <div className="max-w-[80rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         <motion.div
           className="text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
@@ -66,6 +66,14 @@ export default function Footer() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <span className="text-xl font-heading font-medium tracking-wide">Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-muted hover:text-accent transition-colors duration-300 w-fit">
+                <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
+                  <File className="w-6 h-6" />
+                </div>
+                <span className="text-xl font-heading font-medium tracking-wide">Resume</span>
               </a>
             </li>
           </ul>

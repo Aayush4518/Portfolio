@@ -62,15 +62,20 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-background"
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0, scale: 0.95, filter: "blur(8px)" }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
+      exit={{ opacity: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 } }}
     >
+      <motion.div
+        className="absolute inset-0 bg-background pointer-events-auto"
+        initial={{ opacity: 1 }}
+        exit={{ opacity: 0, filter: "blur(8px)" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      />
+      
       <div className="relative flex items-center justify-center w-56 h-56">
         {/* Stroke Fill Circular Ring */}
         <svg
-          className="absolute inset-0 w-full h-full -rotate-90"
+          className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none"
           viewBox="0 0 100 100"
         >
           <motion.circle
@@ -83,6 +88,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             strokeDasharray="301.59"
             initial={{ strokeDashoffset: 301.59 }}
             animate={{ strokeDashoffset: [301.59, 0, 0, -301.59] }}
+            exit={{ opacity: 0 }}
             transition={{
               duration: 1.1,
               ease: "easeIn",
@@ -92,11 +98,14 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         </svg>
 
         {/* Center Logo */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <img
-            className="rounded-full w-25 h-25 object-cover"
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+          <motion.img
+            layoutId="logo"
+            className="rounded-full w-25 h-25 object-cover pointer-events-auto"
             src="logo.svg"
             alt="logo"
+            // Wait with unmounting the logo briefly allowing layoutId capture
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           />
         </div>
       </div>

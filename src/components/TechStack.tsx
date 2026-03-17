@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 
 const skillsGroup1 = [
-  "MongoDB", "Node.js", "JavaScript", "TypeScript", 
-  "React.js", "Docker", "Firebase", "PostgreSQL",
+  "MongoDB", "Node.js", "Docker", "Firebase", "JavaScript", "TypeScript", 
+  "React.js",  "PostgreSQL",
   "MongoDB", "Node.js", "JavaScript", "TypeScript", 
   "React.js", "Docker", "Firebase", "PostgreSQL"
 ];
 
 const skillsGroup2 = [
-  "TailwindCSS", "Next.js", "REST API", "GraphQL", 
-  "Redux", "AWS", "Git", "Framer Motion",
+  "Next.js", "REST API", "Git", "GraphQL", 
+  "Redux", "TailwindCSS",  "AWS", "Framer Motion",
   "TailwindCSS", "Next.js", "REST API", "GraphQL", 
   "Redux", "AWS", "Git", "Framer Motion"
 ];

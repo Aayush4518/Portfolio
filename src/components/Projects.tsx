@@ -7,30 +7,31 @@ import { useRef } from "react";
 const projects = [
   {
     title: "RaiseIN",
-    description: "A platform focused on connecting opportunities and developers.",
-    stack: ["Next.js", "Next Auth", "Node.js", "Tailwind CSS", "MongoDB", "Razorpay", ],
+    description: "A platform focused on fundraising, tuned for Indian market.",
+    stack: ["Next.js", "Next Auth", "Redis Rate limiting", "Node.js", "Tailwind CSS", "MongoDB", "Razorpay API", ],
   },
   {
     title: "YouTube Focus Extension",
     description: "A browser extension that helps maintain focus by hiding distractions and restoring them after a timer.",
-    stack: ["JavaScript", "Browser API", "HTML/CSS"],
-  },
-  {
-    title: "Spotify Clone",
-    description: "Frontend recreation of Spotify UI.",
-    stack: ["React", "Tailwind CSS"],
-  },
-  {
-    title: "Netflix Clone",
-    description: "Responsive UI recreation.",
-    stack: ["React", "API Integration", "Tailwind CSS"],
+    stack: ["JavaScript", "Browser API", "Chrome Extension (Manifest V3)"],
   },
   {
     title: "Travel Guardian",
     description: "A tourist safety system designed for travelers. It includes an SOS safety feature and displays risk or danger zones on an interactive map using Leaflet.",
-    stack: ["React", "Leaflet.js", "WebSockets", "Machine Learning", "Node.js", "Authentication"],
+    stack: ["React", "Leaflet.js", "WebSockets", "Machine Learning Models", "Node.js", "Authentication", "React Native", "Expo"],
     note: "Currently under development as a collaborative project."
+  },
+  {
+    title: "Spotify Clone",
+    description: "Frontend recreation of Spotify UI.",
+    stack: ["React", "Tailwind CSS", "Dynamic Album loading"],
+  },
+  {
+    title: "Netflix Clone",
+    description: "Responsive UI recreation.",
+    stack: ["HTML", "CSS", "JavaScript"],
   }
+  
 ];
 
 export default function Projects() {

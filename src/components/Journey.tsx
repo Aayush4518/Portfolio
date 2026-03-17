@@ -7,7 +7,7 @@ const milestones = [
   {
     date: "2026 – Present",
     title: "Exploring Advanced Technologies",
-    description: "Currently working on projects using technologies such as WebSockets, Docker, Firebase, and modern full-stack frameworks."
+    description: "Currently building projects with technologies like WebSockets, Docker, Firebase, and modern full-stack frameworks, while actively exploring and deepening my expertise in backend development."
   },
   {
     date: "March 2026",
@@ -18,7 +18,7 @@ const milestones = [
   {
     date: "February 2026",
     title: "First Full-Stack Platform",
-    description: "Built my first fully working full-stack project including authentication, APIs, and backend integrations."
+    description: "Built my first fully working full-stack project including authentication, API management, Rate limiting (Redis), SEO management and backend integrations."
   },
   {
     date: "September 2025",
