@@ -40,17 +40,12 @@ export default function Footer() {
         >
           {/* <h2 className="text-2xl font-heading font-medium text-foreground mb-2 tracking-wide">AAYUSH SINGH</h2>
           <p className="text-muted text-sm font-light">Building modern web experiences.</p> */}
-          <h1 className="mb-3 max-w-full text-4xl font-heading font-medium tracking-tight text-foreground sm:text-5xl md:mb-2 md:text-7xl lg:text-8xl">
+          <h1 className="mb-6 pb-4 max-w-full text-4xl font-heading font-medium tracking-tight text-foreground sm:text-5xl md:mb-8 md:pb-4 md:text-7xl lg:text-8xl leading-tight md:leading-tight">
             <AnimatedText>Let&apos;s Build together</AnimatedText>
           </h1>
           <p className="mb-2 text-2xl font-heading font-medium tracking-tight text-foreground sm:text-3xl md:text-4xl">
             <AnimatedText highlightColor="rgb(235, 89, 57)">Connect with me!</AnimatedText>
           </p>
-          {/* <ul className="list-[url('https://minhpham.design/assets/icons/ic-contact-link.svg')]">
-            <li>first</li>
-            <li>second</li>
-            <li>third</li>
-          </ul> */}
           <ul className="my-8 space-y-5 w-fit mx-auto md:mx-0">
             <li>
               <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">

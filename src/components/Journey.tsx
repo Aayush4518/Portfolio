@@ -33,8 +33,8 @@ const milestones = [
   },
   {
     date: "March 2025",
-    title: "Netflix UI Clone",
-    description: "Built a responsive Netflix UI clone to practice layout design, responsive styling, and frontend structure."
+    title: "X-Clone",
+    description: "Built a responsive X (formerly Twitter) clone to practice layout design, responsive styling, and frontend structure using TailwindCSS."
   },
   {
     date: "November 2024",
