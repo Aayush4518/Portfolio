@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import AnimatedText from "./AnimatedText";
 
 const milestones = [
   {
@@ -123,9 +124,8 @@ export default function Journey() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <span className="pb-2 border-b border-[rgb(183, 171, 152)]">
-          Professional Journey
-
+          <span className="pb-2 border-b border-[rgb(183, 171, 152)] block w-fit">
+            <AnimatedText>Professional Journey</AnimatedText>
           </span>
         </motion.h2>
 

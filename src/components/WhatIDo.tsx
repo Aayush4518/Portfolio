@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Layout, Server, GaugeCircle, ServerCog } from "lucide-react";
+import AnimatedText from "./AnimatedText";
 
 const services = [
   {
@@ -59,7 +60,7 @@ export default function WhatIDo() {
         >
           <h2 className="text-sm font-medium tracking-widest text-accent uppercase mb-3">Expertise</h2>
           <h3 className="text-3xl md:text-5xl font-heading font-medium tracking-tight text-foreground/90">
-            What I Do
+            <AnimatedText>What I Do</AnimatedText>
           </h3>
         </motion.div>
 

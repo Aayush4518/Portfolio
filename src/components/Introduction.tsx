@@ -58,14 +58,21 @@ export default function Introduction() {
         viewport={{ once: true, margin: "-100px" }}
         >
         <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-heading font-medium tracking-tight leading-[1.2] text-foreground/90">
-          I am a 
-           <span className="text-[rgb(235,89,57)]"> Developer </span>
-            based in Bangalore, interested in modern web technologies. 
-          <span className="text-muted block mt-4 lg:mt-6">I build tools, platforms, and intelligent systems with a focus on real-world impactful products.</span>
+          <AnimatedText>I am a</AnimatedText>
+          {" "}
+          <AnimatedText highlightColor="rgb(235, 89, 57)">Developer</AnimatedText>
+          {" "}
+          <AnimatedText>
+            {`based in Bangalore, interested in modern web technologies.`}
+          </AnimatedText>
+          <span className="block mt-4 lg:mt-6 text-muted">
+            <AnimatedText>
+              {`I build tools, platforms, and intelligent systems\nwith a focus on real-world impactful products.`}
+            </AnimatedText>
+          </span>
         </h2>
         <div></div>
       </motion.div>
-        {/* </AnimatedText> */}
     </section>
   );
 }

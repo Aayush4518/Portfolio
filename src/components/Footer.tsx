@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { File, Github, Linkedin, Mail } from "lucide-react";
 import { useRef } from "react";
+import AnimatedText from "./AnimatedText";
 
 export default function Footer() {
   const containerRef = useRef<HTMLElement>(null);
@@ -14,7 +15,10 @@ export default function Footer() {
   const yOrb = useTransform(scrollYProgress, [0, 1], ["50%", "-10%"]);
 
   return (
-    <footer ref={containerRef} className="relative py-20 px-6 md:px-12 lg:px-24 border-t border-white/5 mt-10 overflow-hidden">
+    <footer
+      ref={containerRef}
+      className="relative mt-10 overflow-hidden border-t border-white/5 px-5 py-16 sm:px-6 md:px-12 md:py-20 lg:px-24"
+    >
 
       {/* 3D Glowing Orb (Right Background) */}
       <motion.div
@@ -26,9 +30,9 @@ export default function Footer() {
         }}
       />
 
-      <div className="max-w-[80rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+      <div className="relative z-10 mx-auto flex max-w-[80rem] flex-col items-center justify-between gap-8 md:flex-row">
         <motion.div
-          className="text-center md:text-left"
+          className="w-full max-w-full text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,48 +40,54 @@ export default function Footer() {
         >
           {/* <h2 className="text-2xl font-heading font-medium text-foreground mb-2 tracking-wide">AAYUSH SINGH</h2>
           <p className="text-muted text-sm font-light">Building modern web experiences.</p> */}
-          <h1 className="text-8xl font-heading font-medium text-foreground mb-2 tracking-wide">Let's Build together</h1>
-          <p className="text-4xl font-heading font-medium text-foreground mb-2 tracking-wide">Connect with me!</p>
+          <h1 className="mb-3 max-w-full text-4xl font-heading font-medium tracking-tight text-foreground sm:text-5xl md:mb-2 md:text-7xl lg:text-8xl">
+            <AnimatedText>Let&apos;s Build together</AnimatedText>
+          </h1>
+          <p className="mb-2 text-2xl font-heading font-medium tracking-tight text-foreground sm:text-3xl md:text-4xl">
+            <AnimatedText highlightColor="rgb(235, 89, 57)">Connect with me!</AnimatedText>
+          </p>
           {/* <ul className="list-[url('https://minhpham.design/assets/icons/ic-contact-link.svg')]">
             <li>first</li>
             <li>second</li>
             <li>third</li>
           </ul> */}
-          <ul className="mt-8 mb-8 space-y-6">
+          <ul className="my-8 space-y-5">
             <li>
-              <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-muted hover:text-accent transition-colors duration-300 w-fit">
+              <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Github className="w-6 h-6" />
                 </div>
-                <span className="text-xl font-heading font-medium tracking-wide">GitHub</span>
+                <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/aayush-singh-766a77290/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-muted hover:text-accent transition-colors duration-300 w-fit">
+              <a href="https://linkedin.com/in/aayush-singh-766a77290/" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Linkedin className="w-6 h-6" />
                 </div>
-                <span className="text-xl font-heading font-medium tracking-wide">LinkedIn</span>
+                <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-muted hover:text-accent transition-colors duration-300 w-fit">
+              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
-                <span className="text-xl font-heading font-medium tracking-wide">Email</span>
+                <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">Email</span>
               </a>
             </li>
             <li>
-              <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-muted hover:text-accent transition-colors duration-300 w-fit">
+              <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <File className="w-6 h-6" />
                 </div>
-                <span className="text-xl font-heading font-medium tracking-wide">Resume</span>
+                <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">Resume</span>
               </a>
             </li>
           </ul>
-          <p className="text-muted text-xl font-light">I am always open to new opportunities and collaborations. Feel free to reach out if you have any questions or would like to discuss potential projects.</p>
+          <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-muted sm:text-lg md:mx-0 md:text-xl">
+            I am always open to new opportunities and collaborations. Feel free to reach out if you have any questions or would like to discuss potential projects.
+          </p>
         </motion.div>
 
         <motion.div
