@@ -51,9 +51,9 @@ export default function Footer() {
             <li>second</li>
             <li>third</li>
           </ul> */}
-          <ul className="my-8 space-y-5">
+          <ul className="my-8 space-y-5 w-fit mx-auto md:mx-0">
             <li>
-              <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
+              <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Github className="w-6 h-6" />
                 </div>
@@ -61,7 +61,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/aayush-singh-766a77290/" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
+              <a href="https://linkedin.com/in/aayush-singh-766a77290/" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Linkedin className="w-6 h-6" />
                 </div>
@@ -69,7 +69,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
+              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
@@ -77,7 +77,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group mx-auto flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent md:mx-0">
+              <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <File className="w-6 h-6" />
                 </div>
