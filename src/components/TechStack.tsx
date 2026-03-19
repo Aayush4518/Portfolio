@@ -10,8 +10,8 @@ const skillsGroup1 = [
 ];
 
 const skillsGroup2 = [
-  "Next.js", "REST API", "Git", 
-  "Redux",  "AWS", "Framer Motion",
+  "Next.js", "Git", 
+  "Redux",  "AWS", "Redis",
   "TailwindCSS", "Next.js", "REST API", 
   "Redux", "AWS", "Git", "Framer Motion"
 ];
