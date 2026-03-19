@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 
 const skillsGroup1 = [
-  "MongoDB", "Node.js", "Docker", "Firebase", "JavaScript", "TypeScript", 
-  "React.js",  "PostgreSQL",
+  "React.js", "MERN", "Docker", "Firebase", "Web Sockets", "REST API", 
+  "TypeScript",  "PostgreSQL",
   "MongoDB", "Node.js", "JavaScript", "TypeScript", 
   "React.js", "Docker", "Firebase", "PostgreSQL"
 ];
 
 const skillsGroup2 = [
-  "Next.js", "REST API", "Git", "GraphQL", 
-  "Redux", "TailwindCSS",  "AWS", "Framer Motion",
-  "TailwindCSS", "Next.js", "REST API", "GraphQL", 
+  "Next.js", "REST API", "Git", 
+  "Redux",  "AWS", "Framer Motion",
+  "TailwindCSS", "Next.js", "REST API", 
   "Redux", "AWS", "Git", "Framer Motion"
 ];
 
@@ -39,25 +39,25 @@ export default function TechStack() {
 
       <div className="relative w-full flex flex-col gap-6 mask-image-linear-center">
         {/* Row 1: Left to Right */}
-        <div className="flex w-[200%] gap-4 animate-scroll-left">
+        <div className="flex w-[200%] gap-3 md:gap-4 animate-scroll-left">
           {skillsGroup1.map((skill, index) => (
             <div 
               key={`row1-${index}`} 
-              className="flex-shrink-0 px-8 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/10 hover:border-accent/30 transition-colors duration-300"
+              className="flex-shrink-0 px-5 py-2.5 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/10 hover:border-accent/30 transition-colors duration-300"
             >
-              <span className="text-foreground/80 font-medium tracking-wide whitespace-nowrap">{skill}</span>
+              <span className="text-sm md:text-base text-foreground/80 font-medium tracking-wide whitespace-nowrap">{skill}</span>
             </div>
           ))}
         </div>
 
         {/* Row 2: Right to Left */}
-        <div className="flex w-[300%] gap-4 animate-scroll-right flex-row-reverse -translate-x-1/2">
+        <div className="flex w-[200%] gap-3 md:gap-4 animate-scroll-right flex-row-reverse">
           {skillsGroup2.map((skill, index) => (
             <div 
               key={`row2-${index}`} 
-              className="flex-shrink-0 px-8 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/10 hover:border-accent/30 transition-colors duration-300"
+              className="flex-shrink-0 px-5 py-2.5 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/10 hover:border-accent/30 transition-colors duration-300"
             >
-              <span className="text-foreground/80 font-medium tracking-wide whitespace-nowrap">{skill}</span>
+              <span className="text-sm md:text-base text-foreground/80 font-medium tracking-wide whitespace-nowrap">{skill}</span>
             </div>
           ))}
         </div>

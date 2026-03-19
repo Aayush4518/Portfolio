@@ -49,11 +49,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 25s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 25s linear infinite;
+}
+
+@media (min-width: 1024px) {
+  .animate-scroll-left, .animate-scroll-right {
+    animation-duration: 80s;
+  }
 }
 
 .mask-image-linear-center {
