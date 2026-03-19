@@ -71,8 +71,8 @@ pnpm dev
 
 ## 🚢 Deployment
 
-The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new).
-For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+This project is deployed on Vercel.
+[Live App](https://aayushdevfolio.vercel.app)
 
 ---
 
