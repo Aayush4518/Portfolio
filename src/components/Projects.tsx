@@ -97,9 +97,14 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="max-w-4xl">
-                <h3 className="text-3xl md:text-5xl font-heading font-medium text-foreground mb-6 group-hover:text-accent transition-colors duration-500">
-                  {project.title}
-                </h3>
+                <div className="flex items-start justify-between gap-4 mb-6">
+                  <h3 className="text-3xl md:text-5xl font-heading font-medium text-foreground group-hover:text-accent transition-colors duration-500">
+                    {project.title}
+                  </h3>
+                  <div className="flex md:hidden items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:bg-accent group-hover:border-accent group-hover:text-foreground transition-all duration-500 shrink-0">
+                    <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
+                  </div>
+                </div>
                 
                 <p className="text-lg md:text-2xl text-muted font-light leading-relaxed mb-8">
                   {project.description}
