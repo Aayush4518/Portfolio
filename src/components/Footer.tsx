@@ -69,7 +69,15 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
+              {/* Mobile: mailto link */}
+              <a href="mailto:aayushs290107@gmail.com" className="group flex md:hidden w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
+                <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">Email</span>
+              </a>
+              {/* Desktop: Gmail web link */}
+              <a href="https://mail.google.com/mail/?view=cm&to=aayushs290107@gmail.com" target="_blank" rel="noopener noreferrer" className="group hidden md:flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
