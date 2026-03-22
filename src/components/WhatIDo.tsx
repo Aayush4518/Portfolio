@@ -6,14 +6,14 @@ import AnimatedText from "./AnimatedText";
 
 const services = [
   {
-    icon: <Layout className="w-10 h-10 text-accent" />,
-    title: "Frontend Architecture",
-    description: "Designing robust, scalable, and maintainable UI systems. I focus on component-driven development and modern frameworks to craft engaging user experiences."
-  },
-  {
     icon: <Server className="w-10 h-10 text-accent" />,
     title: "Full Stack Development",
     description: "Bridging the gap between beautiful interfaces and powerful backends. Bringing end-to-end solutions to life with seamless API integrations and secure databases."
+  },
+  {
+    icon: <Layout className="w-10 h-10 text-accent" />,
+    title: "Frontend Architecture",
+    description: "Designing robust, scalable, and maintainable systems. I focus on component-driven development and modern frameworks to craft engaging user experiences."
   },
   {
     icon: <GaugeCircle className="w-10 h-10 text-accent" />,
