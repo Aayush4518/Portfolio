@@ -6,9 +6,21 @@ import { useRef } from "react";
 
 const projects = [
   {
+    title: "APIX",
+    description: "A developer CLI tool for API testing with AI-powered request generation, enabling faster workflows directly from the terminal.",
+    stack: ["Node.js", "Commander.js", "Axios", "Groq API"],
+    link: "https://www.npmjs.com/package/apix-dev-cli"
+  },
+  {
+    title: "EnviroSim",
+    description: "An interactive micro-climate simulation platform that lets users visualize how environmental factors like rainfall, pollution, and vegetation impact urban areas in real time. It enables 'what-if' scenario analysis to support sustainable planning and climate awareness.",
+    stack: ["Next.js", "JavaScript", "MapLibre GL", "Node.js", "Express", "Zustand"],
+    link: "https://github.com/Senpai-Akash/EnviroSim"
+  },
+  {
     title: "RaiseIN",
     description: "A platform focused on fundraising, tuned for Indian market.",
-    stack: ["Next.js", "Next Auth", "Redis Rate limiting", "Node.js", "Tailwind CSS", "MongoDB", "Razorpay API", ],
+    stack: ["Next.js", "Next Auth", "Redis Rate limiting", "Node.js", "Tailwind CSS", "MongoDB", "Razorpay API",],
     link: "https://raisein.vercel.app"
   },
   {
@@ -40,7 +52,7 @@ const projects = [
 
 export default function Projects() {
   const containerRef = useRef<HTMLElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -51,7 +63,7 @@ export default function Projects() {
 
   return (
     <section ref={containerRef} className="relative py-32 px-6 md:px-12 lg:px-24 overflow-hidden">
-      
+
       {/* 3D Floating Diamond (Left) */}
       <motion.div
         className="absolute -left-12 top-[30%] w-48 h-48 hidden md:block"
@@ -71,7 +83,7 @@ export default function Projects() {
       />
 
       <div className="max-w-[85rem] mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-2xl md:text-4xl font-heading mb-16 text-muted font-medium"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +91,7 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
         >
           <span className="pb-2 border-b border-[rgb(183, 171, 152)]">
-          Selected Works
+            Selected Works
           </span>
         </motion.h2>
 
@@ -105,11 +117,11 @@ export default function Projects() {
                     <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
                   </div>
                 </div>
-                
+
                 <p className="text-lg md:text-2xl text-muted font-light leading-relaxed mb-8">
                   {project.description}
                 </p>
-                
+
                 {project.note && (
                   <div className="inline-block mb-8 px-5 py-2.5 border border-accent/20 bg-accent/[0.03] text-accent rounded-full text-sm md:text-base tracking-wide">
                     {project.note}
