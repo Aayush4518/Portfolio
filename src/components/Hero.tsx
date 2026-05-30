@@ -31,35 +31,13 @@ export default function Hero() {
         }}
       />
 
-      {/* 3D Sphere Right */}
-      {/* <motion.div 
-        className="absolute -right-32 bottom-20 w-80 h-80 rounded-[40%] hidden md:block"
-        style={{ 
-          y: yRight,
-          rotate: rotateRight,
-          background: "radial-gradient(circle at 70% 30%, #222222, #020202)",
-          boxShadow: "inset 10px -10px 20px rgba(0,0,0,0.9), inset -10px 10px 20px rgba(255,255,255,0.03), 0 30px 60px rgba(235,89,57,0.1)"
-        }}
-      /> */}
-      {/* <motion.div
-        layoutId="3d"
-        className="absolute -right-16 top-4 h-56 w-56 overflow-hidden opacity-90 pointer-events-none sm:-right-10 sm:top-6 sm:h-72 sm:w-72 md:pointer-events-auto md:right-0 md:bottom-0 md:top-auto md:h-[32rem] md:w-[32rem] md:opacity-100 lg:h-[44rem] lg:w-[44rem]"
-        style={{ y: yRight, rotate: rotateRight }}
-      >
-        <iframe
-          src="https://my.spline.design/genkubgreetingrobot1-2kZlrAOfRlnG6zBii8GK81RM/"
-          className="h-full w-full border-0"
-          title="Greeting robot 3D model"
-        />
-      </motion.div> */}
-
-      {/* Current hero image kept for reference. */}
+      
       <motion.div>
         <motion.img
           layoutId="3d"
           className="absolute 
-      right-3 top-6 w-52 h-52 opacity-60 md:opacity-100 
-      md:right-15 md:top-auto md:bottom-0 md:w-160 md:h-160 rounded-[40%] 
+      right-3 top-6 w-52 h-52 md:opacity-100 
+      md:right-15 md:top-auto md:bottom-10 md:w-140 md:h-140 rounded-[40%] 
       object-cover pointer-events-none
       "
           src="/hero-img.jpeg"

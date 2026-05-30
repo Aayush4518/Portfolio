@@ -35,19 +35,19 @@ const projects = [
     stack: ["React", "Leaflet.js", "WebSockets", "Machine Learning Models", "Node.js", "Authentication", "React Native", "Expo"],
     note: "Currently under development as a collaborative project.",
     link: "https://github.com/Aayush4518/GDG-Project"
-  },
-  {
-    title: "Spotify Clone",
-    description: "Frontend recreation of Spotify UI.",
-    stack: ["React", "Tailwind CSS", "Dynamic Album loading"],
-    link: "https://aayush-spotify-omega.vercel.app/"
-  },
-  {
-    title: "X-Clone",
-    description: "Responsive UI recreation.",
-    stack: ["TailwindCSS", "JavaScript"],
-    link: "https://github.com/Aayush4518/x-clone"
   }
+  // {
+  //   title: "Spotify Clone",
+  //   description: "Functional recreation of Spotify with UI and dynamic Albums.",
+  //   stack: ["React", "Tailwind CSS", "Dynamic Album loading"],
+  //   link: "https://aayush-spotify-omega.vercel.app/"
+  // }
+  // {
+  //   title: "X-Clone",
+  //   description: "Responsive UI recreation.",
+  //   stack: ["TailwindCSS", "JavaScript"],
+  //   link: "https://github.com/Aayush4518/x-clone"
+  // }
 ];
 
 export default function Projects() {
