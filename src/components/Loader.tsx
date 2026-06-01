@@ -68,8 +68,8 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       <motion.div
         className="absolute inset-0 bg-background pointer-events-auto"
         initial={{ opacity: 1 }}
-        exit={{ opacity: 0, filter: "blur(8px)" }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       />
       
       <div className="relative flex items-center justify-center w-56 h-56">
@@ -100,11 +100,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         {/* Center Logo */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <motion.img
-            layoutId="logo"
             className="rounded-full w-25 h-25 object-cover pointer-events-auto"
             src="logo.svg"
             alt="logo"
-            // Wait with unmounting the logo briefly allowing layoutId capture
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           />
         </div>
