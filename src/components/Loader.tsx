@@ -100,6 +100,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         {/* Center Logo */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <motion.img
+            layoutId="logo"
             className="rounded-full w-25 h-25 object-cover pointer-events-auto"
             src="logo.svg"
             alt="logo"

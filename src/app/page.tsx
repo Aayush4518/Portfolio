@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
 import Loader from "@/components/Loader";
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <main className="bg-background min-h-screen text-foreground selection:bg-accent/30 selection:text-foreground">
+      <LayoutGroup>
         <AnimatePresence mode="wait">
           {isLoading && (
             <Loader key="loader" onComplete={() => setIsLoading(false)} />
@@ -61,6 +62,7 @@ export default function Home() {
               className="absolute top-6 left-6 md:top-8 md:left-8 z-[100] pointer-events-none"
             >
               <motion.img
+                layoutId="logo"
                 className="rounded-full w-12 h-12 md:w-16 md:h-16 object-cover pointer-events-auto cursor-pointer shadow-lg"
                 src="logo.svg"
                 alt="logo"
@@ -70,6 +72,7 @@ export default function Home() {
             </motion.div>
           )}
         </AnimatePresence>
+      </LayoutGroup>
       <BackToTop />
     </main>
   );
