@@ -40,7 +40,7 @@ export default function Footer() {
         >
           {/* <h2 className="text-2xl font-heading font-medium text-foreground mb-2 tracking-wide">AAYUSH SINGH</h2>
           <p className="text-muted text-sm font-light">Building modern web experiences.</p> */}
-          <h1 className="mb-6 pb-4 max-w-full text-4xl font-heading font-medium tracking-tight text-foreground sm:text-5xl md:mb-8 md:pb-4 md:text-7xl lg:text-8xl leading-tight md:leading-tight">
+          <h1 className="mb-6 pb-4 max-w-full text-4xl font-heading font-medium tracking-tight text-foreground sm:text-5xl md:mb-8 md:pb-4 md:text-7xl lg:text-8xl leading-none md:leading-snug">
             <AnimatedText>Let&apos;s Build together</AnimatedText>
           </h1>
           <p className="mb-2 text-2xl font-heading font-medium tracking-tight text-foreground sm:text-3xl md:text-4xl">

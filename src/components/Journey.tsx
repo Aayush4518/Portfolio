@@ -143,7 +143,7 @@ export default function Journey() {
             {milestones.map((milestone, idx) => (
               <div key={idx} className="relative group">
                 {/* Glowing Node */}
-                <div className="absolute -left-[30px] md:-left-[44px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-accent group-hover:bg-accent transition-colors duration-500 z-10 box-content">
+                <div className="absolute -left-[30px] md:-left-[40px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-accent group-hover:bg-accent transition-colors duration-500 z-10 box-content">
                   <div className="absolute inset-0 rounded-full bg-accent/40 blur-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
