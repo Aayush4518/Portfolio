@@ -7,14 +7,20 @@ import AnimatedText from "./AnimatedText";
 const milestones = [
   {
     date: "2026 – Present",
-    title: "Exploring Advanced Technologies",
-    description: "Currently building projects with technologies like WebSockets, Docker, Firebase, and modern full-stack frameworks, while actively exploring and deepening my expertise in backend development."
+    title: "Building & Growing",
+    description:
+      "Actively working on real-world projects, experimenting with new ideas while exploring software architecture, backend systems and best practices for developing scalable and maintainable solutions."
   },
   {
-    date: "March 2026",
-    title:"Created my first Chrome Extension",
-    description:"A YouTube Focus mode extension that blocks recommended videos to improve concentration."
-    
+    date: "July 2026",
+    title: "Full-Stack Developer Intern",
+    description: "Started my first Internship as a 2nd Year undergrad as a Full-Stack Engineer. Contributed to real world solutions, collaborated with experienced developers. Had my first code running in production. "
+  },
+  {
+    date: "April 2026",
+    title: "Built My First CLI Tool",
+    description:
+      "Built APIX, a command line API testing tool designed to streamline API development and debugging. Features include API health checks, environment management, LLM-powered API generation and more. Actively expanding its capabilities."
   },
   {
     date: "February 2026",
@@ -30,11 +36,6 @@ const milestones = [
     date: "May 2025",
     title: "Spotify Clone (Functional)",
     description: "Developed a working Spotify clone with music playback functionality using JavaScript, improving my understanding of interactive web applications."
-  },
-  {
-    date: "March 2025",
-    title: "X-Clone",
-    description: "Built a responsive X (formerly Twitter) clone to practice layout design, responsive styling, and frontend structure using TailwindCSS."
   },
   {
     date: "November 2024",
@@ -64,7 +65,7 @@ export default function Journey() {
   });
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  
+
   // Parallax mappings
   const yMug = useTransform(sectionScrollY, [0, 1], ["-10%", "50%"]);
   const ySphere = useTransform(sectionScrollY, [0, 1], ["30%", "-40%"]);
@@ -72,14 +73,14 @@ export default function Journey() {
 
   return (
     <section className="relative py-32 px-6 md:px-12 lg:px-24 overflow-hidden" id="journey" ref={containerRef}>
-      
+
       {/* 3D Abstract Coffee Mug (Right) */}
       <motion.div
         className="absolute -right-8 top-1/4 w-32 h-40 hidden md:flex items-center justify-center"
         style={{ y: yMug, rotate: rotateMug }}
       >
         {/* Mug Body */}
-        <div 
+        <div
           className="w-24 h-32 rounded-b-xl rounded-t-sm"
           style={{
             background: "linear-gradient(135deg, #1f1f1f, #070707)",
@@ -91,14 +92,14 @@ export default function Journey() {
           }}
         />
         {/* Mug Handle */}
-        <div 
+        <div
           className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-16 rounded-r-[40px] border-[8px] border-[#151515] -z-10"
           style={{
             boxShadow: "inset -4px -4px 6px rgba(0,0,0,0.8), 5px 5px 10px rgba(0,0,0,0.5)"
           }}
         />
         {/* Mug Rim Highlight */}
-        <div 
+        <div
           className="absolute top-4 left-1/2 -translate-x-1/2 w-[5.5rem] h-6 rounded-[50%] bg-[#0f0f0f]"
           style={{
             boxShadow: "inset 0 4px 6px rgba(235,89,57,0.15), inset 0 -4px 6px rgba(0,0,0,0.8)"
@@ -107,9 +108,9 @@ export default function Journey() {
       </motion.div>
 
       {/* 3D Sphere (Left) */}
-      <motion.div 
+      <motion.div
         className="absolute left-[-5%] bottom-1/4 w-40 h-40 rounded-full hidden md:block"
-        style={{ 
+        style={{
           y: ySphere,
           background: "radial-gradient(circle at 30% 30%, #222222, #050505)",
           boxShadow: "inset -10px -10px 20px rgba(0,0,0,0.8), inset 10px 10px 20px rgba(255,255,255,0.05), 0 20px 40px rgba(235,89,57,0.1)"
@@ -117,7 +118,7 @@ export default function Journey() {
       />
 
       <div className="max-w-[85rem] mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-2xl md:text-4xl font-heading mb-20 text-muted font-medium"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -134,7 +135,7 @@ export default function Journey() {
           <div className="absolute left-[3px] md:left-[7px] top-4 bottom-4 w-[2px] bg-white/10" />
 
           {/* Animated Accent Progress Line */}
-          <motion.div 
+          <motion.div
             className="absolute left-[3px] md:left-[7px] top-4 w-[2px] bg-accent origin-top"
             style={{ height: lineHeight }}
           />
