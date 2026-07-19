@@ -82,6 +82,16 @@ export default function Projects() {
         }}
       />
 
+      {/* 3D Orb (Right) */}
+      <motion.div
+        className="absolute -right-16 top-[12%] hidden h-40 w-40 rounded-full md:block"
+        style={{
+          y: yDiamond,
+          background: "radial-gradient(circle at 30% 28%, #3a3a3a 0%, #151515 38%, #050505 72%)",
+          boxShadow: "inset 12px 12px 20px rgba(255,255,255,0.07), inset -14px -14px 24px rgba(0,0,0,0.85), -12px 20px 35px rgba(235,89,57,0.12)"
+        }}
+      />
+
       <div className="max-w-[85rem] mx-auto relative z-10">
         <motion.h2
           className="text-2xl md:text-4xl font-heading mb-16 text-muted font-medium"

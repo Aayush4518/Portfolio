@@ -32,7 +32,7 @@ export default function Hero() {
       />
 
       
-      <motion.div className="absolute inset-0 overflow-hidden lg:hidden">
+      <motion.div className="absolute inset-0 overflow-hidden min-[1400px]:hidden">
         <motion.img
           className="absolute inset-0 h-full w-full object-cover opacity-85 blur-[1px]"
           src="/hero-img.jpeg"
@@ -41,11 +41,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-950/20" />
       </motion.div>
 
-      <motion.div className="hidden lg:block">
+      <motion.div className="hidden min-[1400px]:block">
         <motion.img
           className="absolute 
       right-3 top-6 w-52 h-52 md:opacity-100 
-      md:right-15 md:top-auto md:bottom-10 md:w-140 md:h-140 rounded-[40%] 
+      md:right-15 md:top-auto md:bottom-40 md:w-150 md:h-150 rounded-[40%] 
       object-cover pointer-events-none
       "
           src="/hero-img.jpeg"

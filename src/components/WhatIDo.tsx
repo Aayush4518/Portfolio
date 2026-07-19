@@ -49,6 +49,16 @@ const itemVariants = {
 export default function WhatIDo() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] relative overflow-hidden">
+      {/* 3D capsule (Left) */}
+      <motion.div
+        className="pointer-events-none absolute -left-12 top-1/3 hidden h-56 w-28 rotate-[-24deg] rounded-[2.5rem] md:block"
+        animate={{ y: [0, -14, 0], rotate: [-24, -18, -24] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        style={{
+          background: "linear-gradient(135deg, #3a3a3a 0%, #151515 45%, #050505 100%)",
+          boxShadow: "inset 10px 10px 18px rgba(255,255,255,0.06), inset -12px -12px 22px rgba(0,0,0,0.85), 16px 20px 36px rgba(0,0,0,0.55)"
+        }}
+      />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div

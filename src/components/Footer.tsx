@@ -30,6 +30,26 @@ export default function Footer() {
         }}
       />
 
+      {/* 3D cube (Left) */}
+      <motion.div
+        className="pointer-events-none absolute -left-10 bottom-10 hidden h-36 w-36 rotate-12 rounded-[2rem] md:block"
+        style={{
+          y: yOrb,
+          background: "linear-gradient(135deg, #343434 0%, #151515 48%, #050505 100%)",
+          boxShadow: "inset 10px 10px 18px rgba(255,255,255,0.06), inset -12px -12px 22px rgba(0,0,0,0.85), 18px 22px 38px rgba(0,0,0,0.6)"
+        }}
+      />
+
+      {/* 3D orb (Right) */}
+      <motion.div
+        className="pointer-events-none absolute -right-10 top-12 hidden h-40 w-40 rounded-full md:block"
+        style={{
+          y: yOrb,
+          background: "radial-gradient(circle at 30% 28%, #46332c 0%, #1b1513 43%, #050505 75%)",
+          boxShadow: "inset 12px 12px 20px rgba(255,255,255,0.07), inset -14px -14px 24px rgba(0,0,0,0.85), -14px 18px 34px rgba(235,89,57,0.16)"
+        }}
+      />
+
       <div className="relative z-10 mx-auto flex max-w-[80rem] flex-col items-center justify-between gap-8 md:flex-row">
         <motion.div
           className="w-full max-w-full text-center md:text-left"
