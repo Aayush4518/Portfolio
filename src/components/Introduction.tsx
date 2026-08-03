@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import "../app/globals.css"
 import AnimatedText from "./AnimatedText";
 
 export default function Introduction() {
@@ -62,11 +61,11 @@ export default function Introduction() {
           {" "}
           <AnimatedText highlightColor="rgb(235, 89, 57)">Developer</AnimatedText>
           {" "}
-          <AnimatedText>
+          <AnimatedText lineClassName="pb-1">
             {`based in Bangalore, interested in modern web technologies.`}
           </AnimatedText>
           <span className="block mt-4 lg:mt-6 text-muted">
-            <AnimatedText>
+            <AnimatedText lineClassName="pb-1">
               {`I build tools, platforms, and intelligent systems\nwith a focus on real-world impactful products.`}
             </AnimatedText>
           </span>

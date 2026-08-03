@@ -9,14 +9,16 @@ function AnimatedLine({
   index, 
   total,
   highlightColor,
-  baseColor
+  baseColor,
+  lineClassName = ""
 }: { 
   line: ReactNode, 
   progress: MotionValue<number>, 
   index: number, 
   total: number,
   highlightColor: string,
-  baseColor: string
+  baseColor: string,
+  lineClassName?: string
 }) {
   const step = 1 / total;
   // Overlap animations slightly for a more fluid feel across lines
@@ -29,7 +31,7 @@ function AnimatedLine({
 
   return (
     <motion.span
-      className="inline-block w-fit"
+      className={`inline-block w-fit ${lineClassName}`}
       style={{
         backgroundImage:
           `linear-gradient(to right, ${highlightColor} 50%, ${baseColor} 50%, ${baseColor} 100%)`,
@@ -50,12 +52,14 @@ export default function AnimatedText({
   children,
   highlightColor = "rgb(183, 171, 152)",
   baseColor = "rgb(47, 44, 40)",
-  className = ""
+  className = "",
+  lineClassName = ""
 }: { 
   children: ReactNode,
   highlightColor?: string,
   baseColor?: string,
-  className?: string
+  className?: string,
+  lineClassName?: string
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   
@@ -78,6 +82,7 @@ export default function AnimatedText({
             total={lines.length} 
             highlightColor={highlightColor}
             baseColor={baseColor}
+            lineClassName={lineClassName}
           />
           {i < lines.length - 1 && <br />}
         </span>
