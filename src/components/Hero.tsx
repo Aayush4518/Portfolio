@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,30 +34,36 @@ export default function Hero() {
 
       
       <motion.div className="absolute inset-0 overflow-hidden min-[1400px]:hidden">
-        <motion.img
+        <Image
           className="absolute inset-0 h-full w-full object-cover opacity-85 blur-[1px]"
           src="/hero-img.jpeg"
-          alt="img"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-slate-950/20" />
       </motion.div>
 
       <motion.div className="hidden min-[1400px]:block">
-        <motion.img
+        <Image
           className="absolute 
       right-3 top-6 w-52 h-52 md:opacity-100 
       md:right-15 md:top-auto md:bottom-40 md:w-150 md:h-150 rounded-[40%] 
       object-cover pointer-events-none
       "
           src="/hero-img.jpeg"
-          alt="img"
+          alt=""
+          width={600}
+          height={600}
+          sizes="600px"
         />
       </motion.div>
 
 
       <div className="relative z-10 max-w-6xl pr-24 sm:pr-32 md:pr-0 mt-12 md:mt-0">
         <motion.h1
-          className="mb-6 max-w-[8ch] text-6xl font-heading font-bold leading-[0.85] tracking-tighter text-foreground text-shadow-lg sm:text-7xl md:mb-8 md:max-w-none md:text-8xl lg:text-[11rem]"
+          className="font-aeruno mb-6 max-w-[8ch] text-6xl font-bold leading-[0.85] tracking-[0.04em] text-foreground text-shadow-lg sm:text-7xl md:mb-8 md:max-w-none md:text-8xl lg:text-[11rem]"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}

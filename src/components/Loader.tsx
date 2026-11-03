@@ -51,6 +51,9 @@
 
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import Image from "next/image";
+
+const MotionImage = motion.create(Image);
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -99,11 +102,14 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
 
         {/* Center Logo */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-          <motion.img
+          <MotionImage
             layoutId="logo"
             className="rounded-full w-25 h-25 object-cover pointer-events-auto"
-            src="logo.svg"
+            src="/logo.svg"
             alt="logo"
+            width={100}
+            height={100}
+            priority
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           />
         </div>

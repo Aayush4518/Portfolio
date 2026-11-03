@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../styles/ovio.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -27,6 +28,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
+}
+
+.font-aeruno {
+  font-family: var(--font-aeruno), sans-serif;
 }
 
 /* Minimal utility for link highlights that we don't need in standard TW */

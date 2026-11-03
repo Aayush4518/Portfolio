@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
@@ -12,6 +13,12 @@ const inter = Inter({
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+});
+
+const aeruno = localFont({
+  src: "../../public/aeruno/AERUNO-Trial.otf",
+  variable: "--font-aeruno",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -57,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${manrope.variable} antialiased`}>
+      <body className={`${inter.variable} ${manrope.variable} ${aeruno.variable} antialiased`}>
         <CustomCursor />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
