@@ -23,14 +23,12 @@ function sampleContributions(): ContributionDay[] {
 export default async function Home() {
   const login = process.env.GITHUB_LOGIN ?? "Aayush4518";
   let contributions: ContributionDay[];
-  let isSample = false;
 
   try {
     contributions = await getContributions(login);
   } catch {
     contributions = sampleContributions();
-    isSample = true;
   }
 
-  return <HomeContent contributions={contributions} isSample={isSample} />;
+  return <HomeContent contributions={contributions} />;
 }

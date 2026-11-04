@@ -34,6 +34,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-aeruno), sans-serif;
 }
 
+.magnetic-logo {
+  transition: filter 250ms ease;
+}
+
+.magnetic-logo:hover {
+  filter: sepia(0.85) saturate(1.8) hue-rotate(-8deg) drop-shadow(0 0 12px rgba(235, 89, 57, 0.65));
+}
+
 /* Minimal utility for link highlights that we don't need in standard TW */
 .link-hover {
   @apply transition-colors duration-300 hover:text-accent;
