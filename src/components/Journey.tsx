@@ -142,7 +142,7 @@ export default function Journey() {
 
           <div className="flex flex-col gap-16 md:gap-24">
             {milestones.map((milestone, idx) => (
-              <div key={idx} className="relative group">
+              <div key={idx} id={`journey-${idx}`} className="relative group">
                 {/* Glowing Node */}
                 <div className="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-accent group-hover:bg-accent transition-colors duration-500 z-10 box-content">
                   <div className="absolute inset-0 rounded-full bg-accent/40 blur-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

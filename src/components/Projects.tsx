@@ -62,7 +62,7 @@ export default function Projects() {
   const rotateDiamond = useTransform(scrollYProgress, [0, 1], [0, 90]);
 
   return (
-    <section ref={containerRef} className="relative py-32 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section id="projects" ref={containerRef} className="relative py-32 px-6 md:px-12 lg:px-24 overflow-hidden">
 
       {/* 3D Floating Diamond (Left) */}
       <motion.div
@@ -109,6 +109,7 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <motion.a
               key={idx}
+              id={`project-${idx}`}
               href={project.link !== "#" ? project.link : undefined}
               target={project.link !== "#" ? "_blank" : undefined}
               rel={project.link !== "#" ? "noopener noreferrer" : undefined}

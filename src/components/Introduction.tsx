@@ -17,7 +17,7 @@ export default function Introduction() {
   const rotateTorus = useTransform(scrollYProgress, [0, 1], [0, 60]);
 
   return (
-    <section ref={containerRef} className="relative py-32 px-6 md:px-12 lg:px-24 flex items-center min-h-[70vh] overflow-hidden">
+    <section id="introduction" ref={containerRef} className="relative py-32 px-6 md:px-12 lg:px-24 flex items-center min-h-[70vh] overflow-hidden">
       
       {/* 3D Torus (Right) */}
       <motion.div
@@ -64,7 +64,7 @@ export default function Introduction() {
           <AnimatedText lineClassName="pb-1">
             {`based in Bangalore, interested in modern web technologies.`}
           </AnimatedText>
-          <span className="block mt-4 lg:mt-6 text-muted">
+          <span id="about-focus" className="block mt-4 lg:mt-6 text-muted">
             <AnimatedText lineClassName="pb-1">
               {`I build tools, platforms, and intelligent systems\nwith a focus on real-world impactful products.`}
             </AnimatedText>

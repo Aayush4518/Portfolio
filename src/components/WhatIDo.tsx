@@ -48,7 +48,7 @@ const itemVariants = {
 
 export default function WhatIDo() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="what-i-do" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] relative overflow-hidden">
       {/* 3D capsule (Left) */}
       <motion.div
         className="pointer-events-none absolute -left-12 top-1/3 hidden h-56 w-28 rotate-[-24deg] rounded-[2.5rem] md:block"
@@ -84,6 +84,7 @@ export default function WhatIDo() {
           {services.map((service, index) => (
             <motion.div
               key={index}
+              id={`service-${index}`}
               variants={itemVariants}
               className="group p-10 lg:p-14 rounded-3xl bg-[#111111] border border-white/5 hover:border-accent/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(235,89,57,0.15)] relative overflow-hidden flex flex-col min-h-[300px] lg:min-h-[360px]"
             >

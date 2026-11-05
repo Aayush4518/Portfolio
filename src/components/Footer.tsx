@@ -16,6 +16,7 @@ export default function Footer() {
 
   return (
     <footer
+      id="contact"
       ref={containerRef}
       className="relative mt-10 overflow-hidden border-t border-white/5 px-5 py-16 sm:px-6 md:px-12 md:py-20 lg:px-24"
     >
@@ -67,7 +68,7 @@ export default function Footer() {
             <AnimatedText highlightColor="rgb(235, 89, 57)">Connect with me!</AnimatedText>
           </p>
           <ul className="my-8 space-y-5 w-fit mx-auto md:mx-0">
-            <li>
+            <li id="contact-github">
               <a href="https://github.com/Aayush4518" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Github className="w-6 h-6" />
@@ -75,7 +76,7 @@ export default function Footer() {
                 <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">GitHub</span>
               </a>
             </li>
-            <li>
+            <li id="contact-linkedin">
               <a href="https://linkedin.com/in/aayush-singh-766a77290/" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <Linkedin className="w-6 h-6" />
@@ -83,7 +84,7 @@ export default function Footer() {
                 <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">LinkedIn</span>
               </a>
             </li>
-            <li>
+            <li id="contact-email">
               {/* Mobile: mailto link */}
               <a href="mailto:aayushs290107@gmail.com" className="group flex md:hidden w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
@@ -99,7 +100,7 @@ export default function Footer() {
                 <span className="text-lg font-heading font-medium tracking-wide sm:text-xl">Email</span>
               </a>
             </li>
-            <li>
+            <li id="contact-resume">
               <a href="/Aayush_Singh_Resume.pdf" download="Aayush_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group flex w-fit items-center gap-4 text-muted transition-colors duration-300 hover:text-accent">
                 <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors duration-300">
                   <File className="w-6 h-6" />

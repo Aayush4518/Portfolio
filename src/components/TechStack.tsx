@@ -18,7 +18,7 @@ const skillsGroup2 = [
 
 export default function TechStack() {
   return (
-    <section className="py-20 overflow-hidden bg-[#0d0d0d] relative border-t border-b border-white/5">
+    <section id="tech-stack" className="py-20 overflow-hidden bg-[#0d0d0d] relative border-t border-b border-white/5">
       
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-32 bg-accent/5 rounded-[100%] blur-[80px] pointer-events-none" />
@@ -39,7 +39,7 @@ export default function TechStack() {
 
       <div className="relative w-full flex flex-col gap-6 mask-image-linear-center">
         {/* Row 1: Left to Right */}
-        <div className="flex w-[200%] gap-3 md:gap-4 animate-scroll-left">
+        <div id="tech-stack-row-1" className="flex w-[200%] gap-3 md:gap-4 animate-scroll-left">
           {skillsGroup1.map((skill, index) => (
             <div 
               key={`row1-${index}`} 
@@ -51,7 +51,7 @@ export default function TechStack() {
         </div>
 
         {/* Row 2: Right to Left */}
-        <div className="flex w-[200%] gap-3 md:gap-4 animate-scroll-right flex-row-reverse">
+        <div id="tech-stack-row-2" className="flex w-[200%] gap-3 md:gap-4 animate-scroll-right flex-row-reverse">
           {skillsGroup2.map((skill, index) => (
             <div 
               key={`row2-${index}`} 

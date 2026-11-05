@@ -15,8 +15,45 @@ import BackToTop from "@/components/BackToTop";
 import AnimatedText from "@/components/AnimatedText";
 import { ContributionGraph } from "@/components/ovio/contribution-graph/contribution-graph";
 import type { ContributionDay } from "@/components/ovio/contribution-graph/types";
+import ProximitySidebar, { type ProximitySection } from "@/components/ui/proximity-sidebar";
 
 const MotionImage = motion.create(Image);
+
+const pageSections: ProximitySection[] = [
+  { id: "hero", label: "Home", kind: "title" },
+  { id: "github-activity", label: "GitHub Activity", kind: "subtitle" },
+  { id: "github-calendar", label: "Contribution calendar", kind: "body" },
+  { id: "what-i-do", label: "What I Do", kind: "subtitle" },
+  { id: "service-0", label: "Full Stack Development", kind: "body" },
+  { id: "service-1", label: "Frontend Architecture", kind: "body" },
+  { id: "service-2", label: "Scalability & Performance", kind: "body" },
+  { id: "service-3", label: "Exploring Backend", kind: "body" },
+  { id: "introduction", label: "About", kind: "subtitle" },
+  { id: "about-focus", label: "Building tools and platforms", kind: "body" },
+  { id: "tech-stack", label: "Tech Stack", kind: "subtitle" },
+  { id: "tech-stack-row-1", label: "Technology row one", kind: "body" },
+  { id: "tech-stack-row-2", label: "Technology row two", kind: "body" },
+  { id: "journey", label: "Journey", kind: "subtitle" },
+  { id: "journey-0", label: "Building & Growing", kind: "body" },
+  { id: "journey-1", label: "Full-Stack Developer Intern", kind: "body" },
+  { id: "journey-2", label: "Built My First CLI Tool", kind: "body" },
+  { id: "journey-3", label: "First Full-Stack Platform", kind: "body" },
+  { id: "journey-4", label: "Joined GDG", kind: "body" },
+  { id: "journey-5", label: "Spotify Clone", kind: "body" },
+  { id: "journey-6", label: "Started Learning Web Development", kind: "body" },
+  { id: "journey-7", label: "Started B.Tech", kind: "body" },
+  { id: "projects", label: "Projects", kind: "subtitle" },
+  { id: "project-0", label: "APIX", kind: "body" },
+  { id: "project-1", label: "EnviroSim", kind: "body" },
+  { id: "project-2", label: "RaiseIN", kind: "body" },
+  { id: "project-3", label: "YouTube Focus Extension", kind: "body" },
+  { id: "project-4", label: "Travel Guardian", kind: "body" },
+  { id: "contact", label: "Contact", kind: "subtitle" },
+  { id: "contact-github", label: "GitHub", kind: "body" },
+  { id: "contact-linkedin", label: "LinkedIn", kind: "body" },
+  { id: "contact-email", label: "Email", kind: "body" },
+  { id: "contact-resume", label: "Resume", kind: "body" },
+];
 
 export default function HomeContent({
   contributions,
@@ -51,8 +88,15 @@ export default function HomeContent({
               animate={{ opacity: 1 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
+              <div className="fixed inset-y-0 left-0 z-[80] hidden h-screen w-40 lg:block">
+                <ProximitySidebar
+                  sections={pageSections}
+                  side="left"
+                  className="pointer-events-none [&>div]:pointer-events-auto [&>div]:ml-6 [&>div]:mr-0 [&>div]:origin-left [&>div]:scale-x-50"
+                />
+              </div>
               <Hero />
-              <section className="px-6 pt-26 pb-24 md:px-12 lg:px-24">
+              <section id="github-activity" className="px-6 pt-26 pb-24 md:px-12 lg:px-24">
                 <div className="relative z-10 mx-auto max-w-7xl">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -78,7 +122,9 @@ export default function HomeContent({
                       <AnimatedText>A year in code</AnimatedText>
                     </h3>
                   </motion.div>
-                  <ContributionGraph variant="minimal" data={contributions} />
+                  <div id="github-calendar">
+                    <ContributionGraph variant="minimal" data={contributions} />
+                  </div>
                 </div>
               </section>
               <div className="bg-[#0d0d0d]">
